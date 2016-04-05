@@ -1,7 +1,28 @@
 
 .box {
   display: inline-block;
-  width: 200px;
-  height: 100px;
-  margin: 1em;
+  vertical-align: top;
+  width: 400px;
+  margin: .8em;
+  background: #fff;
+}
+
+.site {
+  text-align: right;
+}
+
+.link {
+  display: block;
+  padding: .5em;
+  border-top: solid 1px #ddd;
+}
+
+.link:link, .link:visited, .link:active {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #444;
+  text-decoration: underline;
 }

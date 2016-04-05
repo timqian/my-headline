@@ -1,42 +1,80 @@
 
-import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import Header from '../../components/Header'
-import MainSection from '../../components/MainSection'
-import Box from "../../components/Box";
-import * as TodoActions from '../../actions/todos'
+import React from 'react'
+import Box from '../../components/Box'
 import style from './style.css'
 
-class App extends Component {
+const allLinks = { 
+  'v2ex': [
+    {title:'纯 纯 纯 a fake title', url:'www.v2ex.com/timqian'},
+    {title:'another fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'anotht 纯 Google Play er fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},     
+  ],
+  'medium': [
+    {title:'a fake title', url:'www.v2ex.com/timqian'},
+    {title:'another fake t 纯 Google Play title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'anothert 纯 Google Play  fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+  ],
+  'Reddit': [
+    {title:'a fake title', url:'www.v2ex.com/timqian'},
+    {title:'another fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'anothet 纯 Google Play r fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake t 纯 Google Play title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'anothet 纯 Google Play r fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+  ],
+  'HN': [
+    {title:'a fake title', url:'www.v2ex.com/timqian'},
+    {title:'another fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'anotht 纯 Google Play er fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+    {title:'third fake title', url:'www.v2ex.com/timqian'},
+    {title:'a fake title', url:'http://www.v2ex.com/member/timqian'},
+    {title:'another fake titlas dfas dfasdfas dfasdfas dfasdfae', url:'www.v2ex.com/timqian'},
+  ],
+}
+
+
+function AllBoxes({ allLinks }) {
+  const Boxes = Object.keys(allLinks).map(site => {
+    return <Box site={site} links={allLinks[site]} />
+  })
+  
+  return <div>{Boxes}</div>
+}
+
+class Container extends React.Component {
+  
   render() {
-    const { todos, actions, children } = this.props
     return (
-      <div className={style.normal}>
-        <Header addTodo={actions.addTodo} />
-        <MainSection todos={todos} actions={actions} />
-        {children}
-        <Box />
-        <Box />
-        <Box />
+      <div>
+        <div>date picker</div>
+        <div>
+          <AllBoxes allLinks={allLinks} />
+        </div>
       </div>
-    )
+	  )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    todos: state.todos
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(TodoActions, dispatch)
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
+export default Container
