@@ -3,17 +3,17 @@
   display: inline-block;
   vertical-align: top;
   width: 400px;
-  margin: .8em;
+  margin: 1em;
   background: #fff;
 }
 
 .site {
-  text-align: right;
+  text-align: center;
 }
 
 .link {
   display: block;
-  padding: .5em;
+  padding: .8em;
   border-top: solid 1px #ddd;
 }
 

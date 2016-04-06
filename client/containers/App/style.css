@@ -6,10 +6,9 @@ body {
 }
 
 body {
-  font: 17px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   background: #e2e2e2;
   color: #4e4e4e;
-  font-smoothing: antialiased;
   font-weight: 300;
 }
 
