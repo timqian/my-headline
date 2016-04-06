@@ -5,6 +5,7 @@
   width: 400px;
   margin: 1em;
   background: #fff;
+  border: solid 1px #eee;
 }
 
 .site {
@@ -14,7 +15,7 @@
 .link {
   display: block;
   padding: .8em;
-  border-top: solid 1px #ddd;
+  border-top: solid 4px #e2e2e2;
 }
 
 .link:link, .link:visited, .link:active {
