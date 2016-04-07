@@ -7,7 +7,6 @@ function Box({ site, links }) {
     <div className={style.box}>
       <div className={style.site}>{site}</div>  
       { links.map( link => <a className={style.link} href={link.url}> {link.title} </a> ) }
-
     </div>
   )
 }

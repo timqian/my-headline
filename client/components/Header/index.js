@@ -2,10 +2,12 @@
 import React from 'react'
 import style from './style.css'
 
-function Header() {
+function Header({ date, handleAddDay, handleSubtractDay }) {
   return (
     <header className={style.header}>
-      2016-4-6
+      <button onClick={handleSubtractDay} > - </button>
+      {date}
+      <button onClick={handleAddDay} > + </button>
     </header>
   )
 }

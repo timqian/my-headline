@@ -1,29 +1,69 @@
 
 import React from 'react'
-import Box from '../../components/Box'
+import moment from 'moment'
+import axios from 'axios'
+
+import { dataUrl } from '../../config'
 import Header from '../../components/Header'
+import Boxes from '../Boxes'
 import style from './style.css'
 
-const allLinks = {"v2ex":[{"url":"https://www.v2ex.com/t/268756","title":"CnBeta 需要您的协助。。"},{"url":"https://www.v2ex.com/t/268747","title":"刚注册的 Gmail，用了不到 30 分钟删掉了"},{"url":"https://www.v2ex.com/t/268859","title":"如果你女朋友辞职去做视频主播，因为她身边的几个同学都做了，你会崩溃么？"},{"url":"https://www.v2ex.com/t/268866","title":"我准备买搬瓦工"},{"url":"https://www.v2ex.com/t/268837","title":"被这样的同学恶心到了"},{"url":"https://www.v2ex.com/t/268684","title":"上海静安区，一个月 4000 块钱，能不能活的下去，求指教，大三实习生一枚，没去过那么大的城市"},{"url":"https://www.v2ex.com/t/268817","title":"开个虚拟机马上突破 100°C 可以烧水了吗"},{"url":"https://www.v2ex.com/t/268867","title":"大家对和颐酒店女房客遇袭案怎么看？"},{"url":"https://www.v2ex.com/t/268928","title":"当程序员成立了 Hello World 共和国……"},{"url":"https://www.v2ex.com/t/268751","title":"我就是来吐槽阿里云的！阿里云你牛逼，我走还不行吗？"}],"medium":[{"title":"The time that Tony Fadell sold me a container of hummus.","url":"https://medium.com/p/the-time-that-tony-fadell-sold-me-a-container-of-hummus-cb0941c762c1"},{"title":"The Future is Without Apps","url":"https://medium.com/p/the-future-is-without-apps-ddf43ec52aab"},{"title":"Making Medium More Powerful for Publishers","url":"https://medium.com/p/making-medium-more-powerful-for-publishers-39663413a904"},{"title":"The One Piece of Writing Every Hillary Supporter Should Read","url":"https://medium.com/p/the-one-piece-of-writing-every-hillary-supporter-should-read-6ded898f9613"},{"title":"How To Build The Self-Confidence You Need To Win At Life","url":"https://medium.com/p/how-to-build-the-self-confidence-you-need-to-win-at-life-98d5eadb4701"},{"title":"MVPM: Minimum Viable Product Manager","url":"https://medium.com/p/mvpm-minimum-viable-product-manager-e1aeb8dd421"},{"title":"Instagram and the Cult of the Attention Web: How the Free Internet is Eating Itself","url":"https://medium.com/p/instagram-and-the-cult-of-the-attention-web-how-the-free-internet-is-eating-itself-909b5713055e"},{"title":"Museum Logos: Drawing The Line","url":"https://medium.com/p/museum-logos-drawing-the-line-63d3f27cc8fa"},{"title":"When a New Cell Phone Almost Ruins Your Relationship","url":"https://medium.com/p/when-a-new-cell-phone-almost-ruins-your-relationship-c4f876ecd43d"},{"title":"Waiting on a Liver","url":"https://medium.com/p/waiting-on-a-liver-f4ba77f53426"}],"github":[{"url":"https://github.com/firehol/netdata","title":"firehol/netdata: Real-time performance monitoring, done right!"},{"url":"https://github.com/soimort/you-get","title":"soimort/you-get:  Dumb downloader that scrapes the web"},{"url":"https://github.com/andris9/mailtrain","title":"andris9/mailtrain: Self hosted newsletter app"},{"url":"https://github.com/FreeCodeCamp/FreeCodeCamp","title":"FreeCodeCamp/FreeCodeCamp: The  open source codebase and curriculum. Learn to code and help nonprofits."},{"url":"https://github.com/labstack/echo","title":"labstack/echo: Echo is a fast and unfancy web framework for Go (Golang). Up to 10x faster than the rest."},{"url":"https://github.com/kadirahq/react-storybook","title":"kadirahq/react-storybook: Isolate your React UI Component development from the main app"},{"url":"https://github.com/android-cjj/JJSearchViewAnim","title":"android-cjj/JJSearchViewAnim: A cool search view animation library"},{"url":"https://github.com/mmin18/FlexLayout","title":"mmin18/FlexLayout: More powerful than LinearLayout and RelativeLayout which use java expression in layout params"},{"url":"https://github.com/googlesamples/android-architecture","title":"googlesamples/android-architecture: A collection of samples to discuss and showcase different architectural tools and patterns for Android apps."},{"url":"https://github.com/airbnb/caravel","title":"airbnb/caravel: Caravel is a data exploration platform designed to be visual, intuitive, and interactive"}],"HN":[{"url":"https://news.ycombinator.com/item?id=11431108","title":"WhatsApp's Signal Protocol integration is now complete","score":"944"},{"url":"https://news.ycombinator.com/item?id=11430889","title":"GitLab Pages","score":"754"},{"url":"https://news.ycombinator.com/item?id=11435245","title":"Nest Reminds Customers That Ownership Isn't What It Used to Be","score":"409"},{"url":"https://news.ycombinator.com/item?id=11432914","title":"GPG signature verification","score":"329"},{"url":"https://news.ycombinator.com/item?id=11434910","title":"9-year-old reporter breaks crime news, posts videos, fires back at critics","score":"276"},{"url":"https://news.ycombinator.com/item?id=11430009","title":"Introducing DGit","score":"235"},{"url":"https://news.ycombinator.com/item?id=11433178","title":"FBI Says a Mysterious Hacking Group Has Had Access to US Govt Files for Years","score":"215"},{"url":"https://news.ycombinator.com/item?id=11431881","title":"How Candy Japan got credit card fraud somewhat under control","score":"206"},{"url":"https://news.ycombinator.com/item?id=11434802","title":"Y Combinator cofounder Jessica Livingston to take year-long sabbatical","score":"196"},{"url":"https://news.ycombinator.com/item?id=11433554","title":"The Nvidia DGX-1 Deep Learning Supercomputer in a Box","score":"194"}],"reddit":[{"url":"https://www.reddit.com/r/programming/comments/4dfysw/bug_or_feature/","title":"Bug or feature?"},{"url":"https://www.reddit.com/r/programming/comments/4dhrtt/gitlab_pages/","title":"GitLab Pages"},{"url":"https://www.reddit.com/r/programming/comments/4dfjud/java_generics_never_fail_to_impress/","title":"Java generics never fail to impress"},{"url":"https://www.reddit.com/r/programming/comments/4dg2t5/generation_loss_comparison_of_flif_webp_and_jpeg/","title":"Generation loss: comparison of FLIF, WebP and JPEG"},{"url":"https://www.reddit.com/r/programming/comments/4dh3ug/fbi_apple_debacle_is_a_reminder_of_how/","title":"FBI Apple Debacle Is a Reminder of How Fingerprint Sensors Actually Worsen Security"},{"url":"https://www.reddit.com/r/programming/comments/4dhq26/github_gpg_signature_verification/","title":"GitHub - GPG signature verification"},{"url":"https://www.reddit.com/r/programming/comments/4dfoc3/the_magpie_developer/","title":"The Magpie Developer"},{"url":"https://www.reddit.com/r/programming/comments/4dj84l/d_2071_has_been_released_long_standing_import/","title":"D 2.071 Has Been Released: Long standing import bugs fixed, a slightly faster GC, over 100 other bugs fixed, and more!"},{"url":"https://www.reddit.com/r/programming/comments/4dfmj8/strange_behaviour_in_the_net_jitter_or_how_adding/","title":"Strange behaviour in the .NET JITter or &quot;how adding code can improve performance&quot;"},{"url":"https://www.reddit.com/r/programming/comments/4dgful/introducing_dgit_githubs_distributed_storage/","title":"Introducing DGit - GitHub's distributed storage system for git repositories"}]}
-
-
-function AllBoxes({ allLinks }) {
-  const Boxes = Object.keys(allLinks).map(site => {
-    return <Box site={site} links={allLinks[site]} />
-  })
-  
-  return <div>{Boxes}</div>
-}
 
 class Container extends React.Component {
+  constructor(props, context){
+    super(props, context)
+    this.state = {
+      date: location.hash.slice(1) ? location.hash.slice(1) : moment().format('YYYY-MM-DD'),
+      linksObj: {},
+    }
+  }
+  
+  fetchLinksObj(date) {
+    return axios.get(`${dataUrl}/${date}.json`, {timeout: 7000})
+      .then(res => { this.setState({linksObj: res.data}); })  //TO understand promise??? why this is this ???
+      .catch(err => { throw err; });    
+  }
+  
+  handleAddDay() {
+    const newDate = moment(this.state.date).add(1, 'days').format('YYYY-MM-DD');
+    this.fetchLinksObj(newDate)
+      .then(() => {
+        this.setState({ date: newDate });
+        location.hash = newDate;
+      })
+      .catch(err => {
+        console.log('add err:', err)
+      });
+  }
+  
+  handleSubtractDay() {
+    const newDate = moment(this.state.date).subtract(1, 'days').format('YYYY-MM-DD');
+    this.fetchLinksObj(newDate)
+      .then(() => {
+        this.setState({ date: newDate });
+        location.hash = newDate;
+      })
+      .catch(err => {
+        console.log('subtract err: ', err)
+      });
+  }
+  
+  componentDidMount() {
+    this.fetchLinksObj(this.state.date)
+      .catch(err => {
+        console.log('didMount', err);
+      });
+  }
   
   render() {
     return (
       <div>
-         <Header />
-        <div>
-          <AllBoxes allLinks={allLinks} />
-        </div>
+         <Header date={this.state.date} 
+           handleAddDay={this.handleAddDay.bind(this)} 
+           handleSubtractDay={this.handleSubtractDay.bind(this)} 
+         />
+
+         <Boxes linksObj={this.state.linksObj} />
       </div>
 	  )
   }

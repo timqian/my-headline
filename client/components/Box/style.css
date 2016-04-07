@@ -6,6 +6,7 @@
   margin: 1em;
   background: #fff;
   border: solid 1px #eee;
+  border-top: solid 4px rgba(45, 188, 61, 0.78);
 }
 
 .site {

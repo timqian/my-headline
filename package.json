@@ -35,5 +35,9 @@
     "react-router-redux": "^4.0.0",
     "redux": "^3.3.1",
     "redux-actions": "^0.9.1"
+  },
+  "dependencies": {
+    "axios": "^0.9.1",
+    "moment": "^2.12.0"
   }
 }
