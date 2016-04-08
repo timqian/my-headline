@@ -2,7 +2,7 @@
 .box {
   display: inline-block;
   vertical-align: top;
-  width: 400px;
+  max-width: 400px;
   margin: .7em;
   background: #fff;
   // border-top: solid 4px rgba(45, 188, 61, 0.78);
