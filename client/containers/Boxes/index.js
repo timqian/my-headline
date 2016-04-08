@@ -8,7 +8,7 @@ function Boxes({ linksObj }) {
     return <Box site={ site } links={ linksObj[site] } />
   })
   
-  return <div>{ boxArr }</div>
+  return <div className={style.boxes}>{ boxArr }</div>
 }
 
 export default Boxes

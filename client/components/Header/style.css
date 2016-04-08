@@ -1,8 +1,8 @@
-
 .header {
   text-align: center;
   color: #fff;
+  font-size: 1.3em; 
   background-color: rgba(45, 188, 61, 0.78);
-  padding: 15px;
-  margin-bottom: 10px;
+  padding:.7em;
+  margin-bottom: .7em;
 }

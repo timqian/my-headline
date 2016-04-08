@@ -3,10 +3,9 @@
   display: inline-block;
   vertical-align: top;
   width: 400px;
-  margin: 1em;
+  margin: .7em;
   background: #fff;
-  border: solid 1px #eee;
-  border-top: solid 4px rgba(45, 188, 61, 0.78);
+  // border-top: solid 4px rgba(45, 188, 61, 0.78);
 }
 
 .site {
@@ -14,17 +13,16 @@
 }
 
 .link {
+  color: #4e4e4e;
   display: block;
-  padding: .8em;
-  border-top: solid 4px #e2e2e2;
+  padding: .5em;
+  border-top: solid .4em #e2e2e2;
 }
 
 .link:link, .link:visited, .link:active {
-  color: #4e4e4e;
   text-decoration: none;
 }
 
 .link:hover {
-  color: #444;
   text-decoration: underline;
 }
