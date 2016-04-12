@@ -16156,13 +16156,13 @@ webpackJsonp([1],[
 	    _react2.default.createElement(
 	      'button',
 	      { className: _style2.default.btn, onClick: handleSubtractDay },
-	      '◀'
+	      '⇦'
 	    ),
 	    date,
 	    _react2.default.createElement(
 	      'button',
 	      { className: _style2.default.btn, onClick: handleAddDay },
-	      '▶'
+	      ' ⇨ '
 	    )
 	  );
 	}
