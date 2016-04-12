@@ -3,7 +3,7 @@
   color: #efefef;
   font-size: 1.6em; 
   background-color: #616161;
-  padding:.4em;
+  padding:.3em;
   margin-bottom: .7em;
 }
 
@@ -12,6 +12,6 @@
   background: none;
   font-size: 1.0em;
   cursor: pointer;
-  padding:0em;
+  padding:0.1em;
   color: #efefef;
 }
