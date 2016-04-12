@@ -5,9 +5,9 @@ import style from './style.css'
 function Header({ date, handleAddDay, handleSubtractDay }) {
   return (
     <header className={style.header}>
-      <button onClick={handleSubtractDay} > - </button>
+      <button className={style.btn} onClick={handleSubtractDay} > ⥢ </button>
       {date}
-      <button onClick={handleAddDay} > + </button>
+      <button className={style.btn} onClick={handleAddDay} > ⥤ </button>
     </header>
   )
 }
