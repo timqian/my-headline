@@ -1,6 +1,6 @@
 .header {
   text-align: center;
-  color: #fff;
+  color: #efefef;
   font-size: 1.6em; 
   background-color: #616161;
   padding:.4em;
@@ -12,5 +12,5 @@
   background: none;
   font-size: 1.0em;
   cursor: pointer;
-  color: #fff;
+  color: #efefef;
 }

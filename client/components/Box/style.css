@@ -11,14 +11,14 @@
   color: #4b4b4b;
   text-align: center;
   padding: .1em;
-  background: #f1f1f1;
+  background: #ddd;
 }
 
 .link {
   color: #333;
   display: block;
   padding: .5em;
-  border-bottom: solid .4em #e2e2e2;
+  border-bottom: solid .3em #efefef;
 }
 
 .link:link, .link:visited, .link:active {
