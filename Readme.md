@@ -2,6 +2,32 @@
 
 Shows 10 hotest posts on HN, github trending, Reddit, Medium and v2ex everyday.
 
-# For people wondering how the posts are picked
+## The crawler
 
-The crawler is here: https://github.com/timqian/my-headline-crawler
+https://github.com/timqian/my-headline-crawler
+
+## Setup
+
+`$ npm install`
+
+## Running
+
+`$ npm start`
+
+## Build
+
+`$ npm run build`
+
+## Contributors
+
+- [timqian](https://github.com/timqian)
+- [Eric](https://github.com/erichuang1994)
+
+## Thanks
+
+[Tj](https://github.com/tj/frontend-boilerplate) for his boilerplate
+
+# License
+
+MIT
+
