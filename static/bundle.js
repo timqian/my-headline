@@ -16156,7 +16156,7 @@ webpackJsonp([1],[
 	    _react2.default.createElement(
 	      'button',
 	      { className: _style2.default.btn, onClick: handleSubtractDay },
-	      '⇦'
+	      ' ⇦ '
 	    ),
 	    date,
 	    _react2.default.createElement(
@@ -16206,7 +16206,7 @@ webpackJsonp([1],[
 
 
 	// module
-	exports.push([module.id, ".style__header___2uitE {\n  text-align: center;\n  color: #efefef;\n  font-size: 1.6em; \n  background-color: #616161;\n  padding:.4em;\n  margin-bottom: .7em;\n}\n\n.style__btn___3RI82 {\n  border: none;\n  background: none;\n  font-size: 1.0em;\n  cursor: pointer;\n  padding:0em;\n  color: #efefef;\n}\n", "", {"version":3,"sources":["/./components/Header/style.css"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,eAAe;EACf,iBAAiB;EACjB,0BAA0B;EAC1B,aAAa;EACb,oBAAoB;CACrB;;AAED;EACE,aAAa;EACb,iBAAiB;EACjB,iBAAiB;EACjB,gBAAgB;EAChB,YAAY;EACZ,eAAe;CAChB","file":"style.css","sourcesContent":[".header {\n  text-align: center;\n  color: #efefef;\n  font-size: 1.6em; \n  background-color: #616161;\n  padding:.4em;\n  margin-bottom: .7em;\n}\n\n.btn {\n  border: none;\n  background: none;\n  font-size: 1.0em;\n  cursor: pointer;\n  padding:0em;\n  color: #efefef;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".style__header___2uitE {\n  text-align: center;\n  color: #efefef;\n  font-size: 1.6em; \n  background-color: #616161;\n  padding:.3em;\n  margin-bottom: .7em;\n}\n\n.style__btn___3RI82 {\n  border: none;\n  background: none;\n  font-size: 1.0em;\n  cursor: pointer;\n  padding:0.1em;\n  color: #efefef;\n}\n", "", {"version":3,"sources":["/./components/Header/style.css"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,eAAe;EACf,iBAAiB;EACjB,0BAA0B;EAC1B,aAAa;EACb,oBAAoB;CACrB;;AAED;EACE,aAAa;EACb,iBAAiB;EACjB,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;EACd,eAAe;CAChB","file":"style.css","sourcesContent":[".header {\n  text-align: center;\n  color: #efefef;\n  font-size: 1.6em; \n  background-color: #616161;\n  padding:.3em;\n  margin-bottom: .7em;\n}\n\n.btn {\n  border: none;\n  background: none;\n  font-size: 1.0em;\n  cursor: pointer;\n  padding:0.1em;\n  color: #efefef;\n}\n"],"sourceRoot":"webpack://"}]);
 
 	// exports
 	exports.locals = {
