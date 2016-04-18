@@ -13,7 +13,7 @@ class Container extends React.Component {
   constructor(props, context){
     super(props, context)
     this.state = {
-      date: location.hash.slice(1) ? location.hash.slice(1) : moment().format('YYYY-MM-DD'),
+      date: location.hash.slice(1) ? location.hash.slice(1) : moment().subtract(1, 'days').format('YYYY-MM-DD'),
       linksObj: {},
     }
   }

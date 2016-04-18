@@ -254,7 +254,7 @@ webpackJsonp([1],[
 	    var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Container).call(this, props, context));
 
 	    _this.state = {
-	      date: location.hash.slice(1) ? location.hash.slice(1) : (0, _moment2.default)().format('YYYY-MM-DD'),
+	      date: location.hash.slice(1) ? location.hash.slice(1) : (0, _moment2.default)().subtract(1, 'days').format('YYYY-MM-DD'),
 	      linksObj: {}
 	    };
 	    return _this;
