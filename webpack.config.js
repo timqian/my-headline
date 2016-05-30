@@ -3,16 +3,16 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './src/index.js',
   output: {
-    path: path.join(__dirname, './static'),
+    path: path.join(__dirname, './build'),
     filename: 'bundle.js',
   },
   module: {
     loaders: [
       {
         test: /\.css$/,
-        include: /client/,
+        include: /src/,
         loaders: [
           'style-loader',
           'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /client/,
+        exclude: /src/,
         loader: 'style!css'
       },
       {
@@ -43,7 +43,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: './client',
+    contentBase: './src',
     hot: true
   }
 }
