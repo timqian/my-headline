@@ -9,7 +9,7 @@ import Settings from './Settings'
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={Container} >
+    <Route path="/my-headline" component={Container} >
       <IndexRoute component={Main} />
       <Route path="/settings" component={Settings} />
     </Route>
