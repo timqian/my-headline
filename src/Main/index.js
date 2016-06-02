@@ -2,10 +2,10 @@
 import React from 'react'
 import moment from 'moment'
 import axios from 'axios'
-import { dataUrl } from '../../config'
-import Header from '../Header'
-import Boxes from '../Boxes'
-import style from './style.css'
+import queryString from 'query-string'
+import { dataUrl, apis } from '../config'
+import Header from './Header'
+import Boxes from './Boxes'
 
 
 class Container extends React.Component {
@@ -22,7 +22,7 @@ class Container extends React.Component {
   fetchLinksObj(date) {
     return axios.get(`${dataUrl}/${date}.json`, {timeout: 7000})
       .then(res => { this.setState({linksObj: res.data}); })
-      .catch(err => { alert(err.data); });
+      // .catch(err => { alert(err.data); });
   }
 
   handleAddDay() {
@@ -33,7 +33,7 @@ class Container extends React.Component {
         location.hash = newDate;
       })
       .catch(err => {
-        alert('add err:', err)
+        alert(err.data)
       });
   }
 
@@ -45,12 +45,18 @@ class Container extends React.Component {
         location.hash = newDate;
       })
       .catch(err => {
-        console.log('subtract err: ', err)
+        alert(err.data)
       });
   }
 
   componentDidMount() {
     this.fetchLinksObj(this.state.date);
+    // For github login
+    // const githubCode = queryString.parse(location.search).code;
+    // axios.get(`${apis.getGithubAccessToken}/${githubCode}`)
+    //   .then(res => {
+    //     console.log(res)
+    //   })
   }
 
   render() {

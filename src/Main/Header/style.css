@@ -1,8 +1,8 @@
 .header {
   text-align: center;
-  color: #efefef;
-  font-size: 1.6em; 
-  background-color: #616161;
+  /*color: #efefef;*/
+  font-size: 1.6em;
+  /*background-color: #616161;*/
   padding:.3em;
   margin-bottom: .7em;
 }
@@ -13,5 +13,5 @@
   font-size: 1.0em;
   cursor: pointer;
   padding:0.1em;
-  color: #efefef;
+  /*color: #efefef;*/
 }

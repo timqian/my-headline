@@ -8,6 +8,7 @@ function Header({ date, handleAddDay, handleSubtractDay }) {
       <button className={style.btn} onClick={handleSubtractDay} > ⇦ </button>
       {date}
       <button className={style.btn} onClick={handleAddDay} > ⇨ </button>
+      {/*<a href="https://github.com/login/oauth/authorize?client_id=ff88a96e99d104ba468a"> Setting </a>*/}
     </header>
   )
 }

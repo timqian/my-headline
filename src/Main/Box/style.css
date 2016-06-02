@@ -2,8 +2,9 @@
 .box {
   text-align: left;
   display: inline-block;
-  vertical-align: top;
+  /*vertical-align: top;*/
   max-width: 400px;
+  min-width: 300px;
   margin: .7em;
   background: #fff;
   border-radius: 2px;
@@ -20,7 +21,7 @@
 
 .link {
   color: #333;
-  display: block;
+  display: inline-block;
   padding: .5em;
   border-top: solid 1px #efefef;
 }
