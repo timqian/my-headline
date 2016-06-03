@@ -8,6 +8,9 @@ body {
 
 .container {
   /*max-width: 900px;*/
+  background-image: url("http://static.v2ex.com/tiles/random.jpg");
+  /*background-repeat: repeat-x, repeat;*/
+
 }
 
 .header {

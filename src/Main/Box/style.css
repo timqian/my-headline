@@ -2,7 +2,7 @@
 .box {
   text-align: left;
   display: inline-block;
-  max-width: 400px;
+  max-width: 500px;
   min-width: 300px;
   margin: .7em;
   background: #fff;
@@ -21,8 +21,10 @@
 .link {
   color: #333;
   display: block;
-  padding: .6em;
-  border-top: solid 2px #efefef;
+  padding: .7em;
+  padding-left: .8em;
+  padding-right: .8em;
+  border-top: solid 1px #ddd;
 }
 
 .link:link, .link:visited, .link:active {
