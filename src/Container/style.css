@@ -20,7 +20,7 @@ body {
 .li {
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
@@ -43,7 +43,7 @@ body {
   cursor: default;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 300px) {
   .li {
     width: 120px;
     border-bottom: none;
