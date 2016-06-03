@@ -9,7 +9,7 @@ function Box({ site, links }) {
       <h3 className={style.site} style={{background: siteColor[site]}}>
         {site} 🔥
       </h3>
-      { links.map( link => <a className={style.link} href={link.url}> {link.title} </a> ) }
+      { links.map( (link, i) => <a className={style.link} href={link.url}> <span style={{color:'#aaa'}}>{i}. </span> {link.title} </a> ) }
     </div>
   )
 }
