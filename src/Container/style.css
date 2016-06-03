@@ -45,11 +45,11 @@ body {
 
 @media screen and (min-width: 300px) {
   .li {
-    width: 120px;
+    width: 100px;
     border-bottom: none;
     height: 50px;
     line-height: 50px;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   /* Option 1 - Display Inline */
