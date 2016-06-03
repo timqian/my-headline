@@ -10,9 +10,18 @@ body {
   /*max-width: 900px;*/
 }
 
+.header {
+  background-color: #444;
+  /*text-align: center;*/
+}
+
+.div {
+  margin: auto;
+  max-width: 900px;
+}
+
 .ul {
   list-style: none;
-  background-color: #444;
   /*text-align: center;*/
   padding: 0;
   margin: 0;

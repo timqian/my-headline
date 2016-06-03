@@ -3,8 +3,8 @@
   /*color: #efefef;*/
   font-size: 1.6em;
   /*background-color: #616161;*/
-  padding:.3em;
-  margin-bottom: .7em;
+  /*padding:.3em;*/
+  margin-top: .3em;
 }
 
 .btn {
@@ -14,4 +14,8 @@
   cursor: pointer;
   padding:0.1em;
   /*color: #efefef;*/
+}
+
+.btn:hover{
+  color: #999;
 }

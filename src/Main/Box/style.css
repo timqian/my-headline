@@ -2,7 +2,6 @@
 .box {
   text-align: left;
   display: inline-block;
-  /*vertical-align: top;*/
   max-width: 400px;
   min-width: 300px;
   margin: .7em;
@@ -12,18 +11,18 @@
 }
 
 .site {
-  color: #4b4b4b;
+  color: #111;
   text-align: center;
   padding: .1em;
-  background: #ddd;
   border-radius: 2px;
+  margin: 0;
 }
 
 .link {
   color: #333;
-  display: inline-block;
-  padding: .5em;
-  border-top: solid 1px #efefef;
+  display: block;
+  padding: .6em;
+  border-top: solid 2px #efefef;
 }
 
 .link:link, .link:visited, .link:active {

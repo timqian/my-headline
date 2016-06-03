@@ -8,14 +8,16 @@ class Container extends React.Component {
   render() {
     return (
       <div className={style.container}>
-        <header >
-          <ul className={style.ul}>
-            <li className={style.li}><a className={style.a} href="#">Daily</a></li>
-            <li className={style.li}><a className={style.a} href="#">Weekly</a></li>
-            <li className={style.li}><a className={style.a} href="#">Monthly</a></li>
-          </ul>
+        <header className={style.header}>
+          <div className={style.div}>
+            <ul className={style.ul}>
+              <li className={style.li}><a className={style.a} href="#">Daily</a></li>
+              <li className={style.li}><a className={style.a} href="#">Weekly</a></li>
+              <li className={style.li}><a className={style.a} href="#">Monthly</a></li>
+            </ul>
+          </div>
         </header>
-        
+
         {this.props.children}
       </div>
 	  )
