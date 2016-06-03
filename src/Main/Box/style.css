@@ -4,7 +4,7 @@
   display: inline-block;
   max-width: 500px;
   min-width: 300px;
-  margin: .7em;
+  margin: .6em;
   background: #fff;
   border-radius: 4px;
   box-shadow: 3px 4px rgba( 0, 0, 0, 0.2 );
@@ -14,16 +14,13 @@
   color: #111;
   text-align: center;
   padding: .1em;
-  border-radius: 2px;
   margin: 0;
 }
 
 .link {
   color: #333;
   display: block;
-  padding: .7em;
-  padding-left: .8em;
-  padding-right: .8em;
+  padding: .6em;
   border-top: solid 1px #ddd;
 }
 
