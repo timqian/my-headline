@@ -13,6 +13,7 @@
 .site {
   color: #111;
   text-align: center;
+  font-weight:bold;
   /*padding: .1em;*/
   margin: 0;
 }
