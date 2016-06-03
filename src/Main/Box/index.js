@@ -6,9 +6,9 @@ import {siteColor} from '../../config'
 function Box({ site, links }) {
   return (
     <div className={style.box}>
-      <div className={style.site} style={{background: siteColor[site]}}>
+      <h3 className={style.site} style={{background: siteColor[site]}}>
         {site} 🔥
-      </div>
+      </h3>
       { links.map( link => <a className={style.link} href={link.url}> {link.title} </a> ) }
     </div>
   )
