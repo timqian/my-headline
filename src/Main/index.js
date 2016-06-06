@@ -9,10 +9,10 @@ import Boxes from './Boxes'
 
 
 class Container extends React.Component {
-  constructor(props, context){
+  constructor(props, context) {
     super(props, context)
     this.state = {
-      date: location.hash.slice(1) ? location.hash.slice(1) : moment().subtract(1, 'days').format('YYYY-MM-DD'),
+      date: location.hash.slice(1) ? location.hash.slice(1) : moment().subtract(1, 'days').format('YYYY/MM/DD'),
       // example: https://raw.githubusercontent.com/timqian/my-headline-crawler/master/data/2016-04-11.json
       linksObj: {},
     }
@@ -26,7 +26,7 @@ class Container extends React.Component {
   }
 
   handleAddDay() {
-    const newDate = moment(this.state.date).add(1, 'days').format('YYYY-MM-DD');
+    const newDate = moment(this.state.date).add(1, 'days').format('YYYY/MM/DD');
     this.fetchLinksObj(newDate)
       .then(() => {
         this.setState({ date: newDate });
@@ -38,7 +38,7 @@ class Container extends React.Component {
   }
 
   handleSubtractDay() {
-    const newDate = moment(this.state.date).subtract(1, 'days').format('YYYY-MM-DD');
+    const newDate = moment(this.state.date).subtract(1, 'days').format('YYYY/MM/DD');
     this.fetchLinksObj(newDate)
       .then(() => {
         this.setState({ date: newDate });
