@@ -18,11 +18,17 @@
   margin: 0;
 }
 
-.link {
-  color: #333;
+.oneHeadline {
+  position: relative;
   display: block;
   padding: .6em;
   border-top: solid 1px #ddd;
+}
+
+.link {
+  display: inline;
+  margin-right: 18px;
+  color: #333;
 }
 
 .link:link, .link:visited, .link:active {
@@ -31,4 +37,20 @@
 
 .link:hover {
   text-decoration: underline;
+}
+
+.score {
+  display: inline;
+  border-radius: 10px;
+  padding: 2px 6px 2px 6px;
+  font-size: 13px;
+  background-color: #aab0c6;
+  opacity: 0.6;
+  color: white;
+  text-decoration: none;
+  cursor: auto;
+  position: absolute;
+  /*top: -20px;*/
+  right: 3px;
+  /*width: 500px;*/
 }

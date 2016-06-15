@@ -3,9 +3,9 @@ import React from 'react'
 import Box from '../Box'
 import style from './style.css'
 
-function Boxes({ linksObj }) {
-  const boxArr = Object.keys(linksObj).map(site => {
-    return <Box site={ site } links={ linksObj[site] } />
+function Boxes({ headlines }) {
+  const boxArr = Object.keys(headlines).map(site => {
+    return <Box site={ site } links={ headlines[site] } />
   })
 
   return (

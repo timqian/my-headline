@@ -49,10 +49,14 @@ body {
   background-color: #70B7FD;
 }
 
-.a.active {
+.a:active {
   background-color: #fff;
   color: #444;
   cursor: default;
+}
+
+.aActive{
+  background-color: #70B7FD;
 }
 
 @media screen and (min-width: 300px) {
@@ -64,23 +68,26 @@ body {
     font-size: 1.2em;
   }
 
-  /* Option 1 - Display Inline */
   .li {
     display: inline-block;
     margin-right: -4px;
   }
+}
 
-  /* Options 2 - Float
-  .li {
-    float: left;
-  }
-  .ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .{
-    background-color: #444;
-  }
-  */
+.header2 {
+  text-align: center;
+  /*color: #efefef;*/
+  font-size: 1.7em;
+  /*background-color: #616161;*/
+  /*padding:.3em;*/
+  margin-top: .3em;
+}
+
+.btn {
+  border: none;
+  background: none;
+  font-size: 1.0em;
+  cursor: pointer;
+  padding:0.1em;
+  /*color: #efefef;*/
 }

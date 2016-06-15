@@ -3,15 +3,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
-import Container from './Container'
-import Main from './Main'
-import Settings from './Settings'
+import Main from './components'
 
 render((
   <Router history={browserHistory}>
-    <Route path="/my-headline" component={Container} >
-      <IndexRoute component={Main} />
-      <Route path="/settings" component={Settings} />
+    <Route path="/my-headline(/**)" component={Main} >
     </Route>
   </Router>
 ), document.getElementById('root'))
