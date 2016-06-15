@@ -27,6 +27,9 @@ https://github.com/timqian/my-headline-crawler
 
 [Tj](https://github.com/tj/frontend-boilerplate) for his boilerplate
 
+## Screen Shot
+![](./assects/Screenshot.png)
+
 # License
 
 MIT
