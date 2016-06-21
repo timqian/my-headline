@@ -18,12 +18,12 @@ function getTimeOfNow(timeType) {
       return moment().subtract(1, 'months').format('YYYY/MM') + '/mm'
     
     case timeTypes.WEEKLY:
-      const weekOfMonth = moment().day(-8).week() - moment().day(-8).startOf('month').week() + 1
-      return `${moment().day(-8).format('YYYY/MM')}/w${weekOfMonth}`
+      const weekOfMonth = moment().subtract(1, 'days').day(-7).week() - moment().day(-8).startOf('month').week() + 1
+      return `${moment().subtract(1, 'days').day(-7).format('YYYY/MM')}/w${weekOfMonth}`
   }
 }
 
 // test
-console.log( getTimeOfNow(timeTypes.WEEKLY) )
+// console.log( getTimeOfNow(timeTypes.WEEKLY) )
 
 export default getTimeOfNow

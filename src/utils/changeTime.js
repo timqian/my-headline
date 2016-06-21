@@ -61,11 +61,11 @@ function changeTime(timeSplat, add = true) {
 
 // console.log( changeTime('2016/06/01', true) )
 // console.log( changeTime('2016/06/01', false) )
-console.log( changeTime('2016/05/w4', true) )
-console.log( changeTime('2016/05/w4', false) )
-console.log( changeTime('2016/06/w2', true) )
-console.log( changeTime('2016/06/w2', false) )
-console.log( changeTime('2016/07/w5', true) )
+// console.log( changeTime('2016/05/w4', true) )
+// console.log( changeTime('2016/05/w4', false) )
+// console.log( changeTime('2016/06/w2', true) )
+// console.log( changeTime('2016/06/w2', false) )
+// console.log( changeTime('2016/07/w5', true) )
 // console.log( changeTime('2016/06/mm', true) )
 // console.log( changeTime('2016/06/mm', false) )
 

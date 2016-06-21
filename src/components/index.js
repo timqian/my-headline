@@ -2,8 +2,6 @@
 import React from 'react'
 import moment from 'moment'
 import axios from 'axios'
-import queryString from 'query-string'
-import { browserHistory } from 'react-router'
 import { dataUrl, apis, timeTypes } from '../config'
 import defineTimeType from '../utils/getTimeType'
 import getHeadlines from '../utils/getHeadlines'
@@ -16,8 +14,8 @@ import style from './style.css'
 class Container extends React.Component {
   constructor(props, context) {
     super(props, context)
-    const { splat } = this.props.params
-    const time = splat ? splat : moment().subtract(1, 'days').format('YYYY/MM/DD')
+    const time = location.hash.slice(1) ? location.hash.slice(1) : moment().subtract(1, 'days').format('YYYY/MM/DD')
+    console.log(time)
     this.state = {
       time,
       timeType: defineTimeType(time),
@@ -34,7 +32,7 @@ class Container extends React.Component {
     const time = changeTime(this.state.time, add)
     const headlines = await getHeadlines(time)
     this.setState({ time, headlines })
-    browserHistory.push(`/my-headline/${time}`) // update url
+    location.hash = time
   }
 
   async handleTimeTypeChange(timeType) {
@@ -44,7 +42,7 @@ class Container extends React.Component {
       time, headlines,
       timeType: defineTimeType(time)
     })
-    browserHistory.push(`/my-headline/${time}`) // update url
+    location.hash = time
   }
 
   isActive(timeType) {

@@ -30,8 +30,6 @@
   "dependencies": {
     "axios": "^0.9.1",
     "babel-runtime": "^6.9.2",
-    "moment": "^2.12.0",
-    "query-string": "^4.2.0",
-    "react-router": "^2.4.1"
+    "moment": "^2.12.0"
   }
 }
