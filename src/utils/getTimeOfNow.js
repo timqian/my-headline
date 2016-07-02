@@ -15,7 +15,7 @@ function getTimeOfNow(timeType) {
       return moment().subtract(1, 'days').format('YYYY/MM/DD')
     
     case timeTypes.MONTHLY:
-      return moment().subtract(1, 'months').format('YYYY/MM') + '/mm'
+      return moment().subtract(7, 'days').subtract(1, 'months').format('YYYY/MM') + '/mm'
     
     case timeTypes.WEEKLY:
       const weekOfMonth = moment().subtract(1, 'days').day(-7).week() - moment().day(-8).startOf('month').week() + 1

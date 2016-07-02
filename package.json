@@ -30,6 +30,7 @@
   "dependencies": {
     "axios": "^0.9.1",
     "babel-runtime": "^6.9.2",
+    "corner-notie": "^1.2.0",
     "moment": "^2.12.0"
   }
 }
