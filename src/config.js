@@ -10,11 +10,12 @@ export const siteColor = {
   github: '#F5F5F5',
   v2ex: '#FFFFFF',
   reddit: '#CEE3F8',
-  medium: '#19AA6E'
+  medium: '#19AA6E',
+  productHunt: '#da552f',
 }
 
 export const timeTypes = {
   DAILY: 'daily',
   WEEKLY: 'weekly',
-  MONTHLY: 'monthly'
+  MONTHLY: 'monthly',
 }
