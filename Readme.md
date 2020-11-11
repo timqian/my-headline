@@ -1,3 +1,5 @@
+> Deprecated, visit https://github.com/headllines
+
 # my-headline
 
 Shows 10 hotest posts on HN, github trending, Reddit, Medium and v2ex everyday.
